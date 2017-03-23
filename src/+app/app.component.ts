@@ -27,4 +27,8 @@ export class XLargeDirective {
 })
 export class AppComponent {
   title = 'ftw';
+
+  constructor() {
+    console.log('hello world');
+  }
 }

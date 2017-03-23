@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MaterialRootModule, MdButtonModule } from '@angular/material';
+import { MaterialRootModule, MdButtonModule, MdToolbarModule } from '@angular/material';
 import { HomeModule } from './+home/home.module';
 import { AboutModule } from './+about/about.module';
 import { TodoModule } from './+todo/todo.module';
@@ -15,6 +15,7 @@ import { AppComponent, XLargeDirective } from './app.component';
   declarations: [AppComponent, XLargeDirective],
   imports: [
     MaterialRootModule,
+    MdToolbarModule.forRoot(),
     MdButtonModule.forRoot(),
     SharedModule,
     HomeModule,

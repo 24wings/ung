@@ -6,7 +6,7 @@ import { ModelService } from '../shared/model/model.service';
   changeDetection: ChangeDetectionStrategy.Default,
   encapsulation: ViewEncapsulation.Emulated,
   selector: 'home',
-  styleUrls: [ './home.component.css' ],
+  styleUrls: ['./home.component.css'],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
@@ -16,12 +16,14 @@ export class HomeComponent {
     // we need the data synchronously for the client to set the server response
     // we create another method so we have more control for testing
     this.universalInit();
+    console.log('hello home');
   }
 
   universalInit() {
     this.model.get('/data.json').subscribe(data => {
       this.data = data;
     });
+
   }
 
 }
